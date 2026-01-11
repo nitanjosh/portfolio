@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Nethan Josh Bisares Profile</title>
+    <style>
+        .group {
+            transition: all 0.3s ease-in-out;
+            overflow: visible !important;
+        }
+
+        .group.expanded {
+            flex-basis: 100% !important;
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        .group.active{
+            background-color: rgb(31 41 55);
+            color: white;
+        }
+
+        .group.active .text-gray-600{
+            color: white;
+        }
+
+        .dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            display: none;
+            padding: 0;
+        }
+
+        .dropdown-content.open {
+            max-height: none;
+            opacity: 1;
+            padding: 1rem;
+            overflow: hidden;
+            display: block;
+            animation: slideDown 0.4s ease-in-out;
+        }
+
+        /* Slide down animation */
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+    <div class="container px-4">
+        <!-- Profile Information -->
+        <div class="flex flex-row mt-15"> 
+        <!-- Left side: Profile picture and contact info -->
+            <div class="flex flex-col justify-left">
+                <img src="Bisares_Nethan_pic.jpg" class="w-60 h-57 mx-5 mb-10 rounded-lg shadow-lg">
+
+                <!--Email-->
+                <div class="flex items-center ml-4 mx-5 mb-2">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                    </svg>
+                    <p>bisaresnethan@gmail.com</p>
+                </div>
+
+                <!--Phone Number-->
+                <div class="flex items-center ml-4 mx-5 mb-2">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <p>+63 916 794 3470</p>
+                </div>
+                
+                <!--Facebook Link-->
+                <div class="flex items-center ml-4 mx-5 mb-2">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.675 0h-21.35C.597 0 0 .593 0 1.326v21.348C0 23.407.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.31h3.587l-.467 3.622h-3.12V24h6.116C23.403 24 24 23.407 24 22.674V1.326C24 .593 23.403 0 22.675 0z"/>
+                    </svg>
+                    <a href="https://www.facebook.com/nitan.jos/" target="_blank" class="hover:underline">Nethan Josh Bisares</a>
+
+                </div>
+
+                <!--Instagram-->
+                <div class="flex items-center ml-4 mx-5 mb-2">
+                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.88a1.12 1.12 0 110 2.24 1.12 1.12 0 010-2.24z"/>
+                    </svg>
+                    <a href="https://www.instagram.com/nitan.josh/" target="_blank" class="hover:underline">nitan.josh</a>
+            </div>
+        </div>
+
+    <!-- Right side: Main Content -->
+        <div class="flex flex-col justify-left mx-25">
+            <!-- Name and Role-->
+            <div class="flex-col">
+                <h1 class="text-5xl font-bold">Nethan Josh C. Bisares</h1>
+                <p class="text-2xl font-semibold italic text-sky-600">Developer and Data Analyst</p>
+            </div>
+
+            <!--Description-->
+            <div>
+                <p class="text-lg my-5 leading-relaxed text-justify">
+                    I am an aspiring Data Analyst/Scientist and Frontend Software Developer student studying at the University of Santo Tomas.
+                    I love creating projects that help business processes and make lives easier through technology. I am also passionate
+                    about data analysis, visualization, and storytelling using data to help companies make informed decisions.
+                </p>
+            </div>
+
+            
+            <!-- Projects Section -->
+            <div class="my-2">
+                <h2 class="text-3xl font-semibold">Projects</h2>
+                <!--List of Projects-->
+                <div class="flex flex-col gap-5 my-5">
+
+                    <!-- Cards Row -->
+                    <div class="flex flex-row gap-15">
+                        <div class="group bg-gray-100 p-4 flex-1 text-center h-46 rounded-lg shadow-xl border-1 border-gray-300
+                                    hover:bg-gray-800 hover:cursor-pointer transition duration-100
+                                    hover:text-white" data-project="1">
+                            <div class="relative flex flex-col justify-center items-center h-full">
+                                <p class="text-lg font-semibold">CAE-CNN for Robust Malaria Classification using Blood-Smear Images</p>
+                                <p class="text-xl italic text-gray-600 pt-4 group-hover:text-white group-transition duration-300">Data Analyst</p>
+                                <svg class="dropdown-arrow w-5 h-5 transition-transform duration-100 absolute bottom-[-0.8rem]" 
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" 
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" 
+                                        clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="group bg-gray-100 p-4 flex-1 text-center h-46 rounded-lg shadow-xl border-1 border-gray-300 
+                                    hover:bg-gray-800 hover:cursor-pointer transition duration-100
+                                    hover:text-white" data-project="2">
+                            <div class="relative flex flex-col justify-center items-center h-full">
+                                <p class="text-lg font-semibold">SelaHub: Content Management System for Selah Consulting  PH</p>
+                                <p class="text-lg italic text-gray-600 pt-4 group-hover:text-white group-transition duration-300">Project Manager, Business Analyst</p>
+                                <svg class="dropdown-arrow w-5 h-5 transition-transform duration-100 absolute bottom-[-0.8rem]" 
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" 
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" 
+                                        clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="group bg-gray-100 p-4 flex-1 text-center h-46 rounded-lg shadow-xl border-1 border-gray-300
+                                    hover:bg-gray-800 hover:cursor-pointer transition duration-100
+                                    hover:text-white" data-project="3">
+                            <div class="relative flex flex-col justify-center items-center h-full">
+                                <p class="text-lg font-semibold">Course Enrollment Web Application</p>
+                                <p class="text-xl italic text-gray-600 pt-4 group-hover:text-white group-transition duration-300">Front-End Developer</p>
+                                <svg class="dropdown-arrow w-5 h-5 transition-transform duration-100 absolute bottom-[-0.8rem]" 
+                                    fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" 
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" 
+                                        clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dropdown Content Area-->
+                    <div class=" mt-auto dropdown-content bg-gray-100 rounded-lg shadow-lg text-left h-auto" data-content="1">
+                        <ul class="text-md text-gray-800 pl-5">
+                            <li class="my-3">
+                                - Trained, Validated, and Tested the CAE-CNN model,
+                                provided critical data insights from CAE-CNN model
+                                performance with comparison from basis study.
+                            </li>
+                            <li class="mb-3">
+                                - Visualized model performance data using python libraries
+                                to understand the training, validation, and testing process
+                                of the CAE-CNN model.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown-content bg-gray-100 rounded-lg shadow-lg text-left h-auto" data-content="2">
+                        <ul class="text-md text-gray-800 pl-5">
+                            <li class="my-3">
+                                - Led the development of SelaHub, a custom content management system 
+                                tailored to Selah Consulting PH's operational needs, designed to centralize 
+                                document management of Selah's clients, containing role-based access and 
+                                document-related tasks.
+                            </li>
+                            <li class="mb-3">
+                                - Translated business needs into technical specifications, enabling developers to 
+                                implement features aligned with client goals.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dropdown-content bg-gray-100 rounded-lg shadow-lg text-left h-auto" data-content="3">
+                        <ul class="text-md text-gray-800 pl-5">
+                            <li class="my-3">
+                                - Fundamentally redesigned and wire-framed a user-friendly and responsive 
+                                web application utilizing Figma.
+                            </li>
+                            <li class="mb-3">
+                                - Developed and styled responsive web pages using HTML and CSS ensuring
+                                compatibility to various browsers.
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Education-->
+            <div class="my-2 content-section">
+                <h2 class="text-3xl font-semibold">Education</h2>
+                <!--List of Schools-->
+                <div class="flex flex-row gap-15 my-5">
+                    <div class="flex-1 text-center">
+                        <img src="ust seal.jpg" alt="UST Seal" class=" mx-auto h-55">
+                        <p class="flex flex-col text-lg font-semibold">Bachelor of Science in Computer Science major in Data Science</p>
+                        <p class="text-md">2022 - Present</p>
+                    </div>
+                    <div class="flex-1 text-center h-55">
+                        <img src="UST_Senior_High_School_logo.png" alt="UST SHS Logo" class=" mx-auto h-55">
+                        <p class="flex flex-col text-lg font-semibold">Science, Technology, Engineering, and Mathematics</p>
+                        <p class="text-md">2020 - 2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Skills-->
+            <div class="my-2 content-section">
+                <h2 class="text-3xl font-semibold">Skills</h2>
+                <!--List of Skills-->
+                <div class="flex flex-row gap-15 my-5">
+                    <div class="bg-gray-300 p-4 flex-1 text-center h-18 rounded-lg"></div>
+                    <div class="bg-gray-300 p-4 flex-1 text-center h-18 rounded-lg"></div>
+                    <div class="bg-gray-300 p-4 flex-1 text-center h-18 rounded-lg"></div>
+                </div>
+                <div class="flex flex-row gap-15 my-5">
+                    <div class="bg-gray-300 p-4 flex-1 text-center h-18 rounded-lg"></div>
+                    <div class="p-4 flex-1 text-center h-18 rounded-lg"></div>
+                    <div class="p-4 flex-1 text-center h-18 rounded-lg"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--scripts-->
+    <script>
+        const projectCards = document.querySelectorAll('.group');
+        const dropdownContents = document.querySelectorAll('.dropdown-content');
+
+        projectCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const projectId = this.getAttribute('data-project');
+                const arrow = this.querySelector('.dropdown-arrow');
+                const targetContent = document.querySelector(`.dropdown-content[data-content="${projectId}"]`);
+                
+                const isOpen = targetContent.classList.contains('open');
+
+                // Close all dropdowns and reset arrows
+                dropdownContents.forEach(content => {
+                    content.classList.remove('open');
+                });
+
+                projectCards.forEach(otherCard => {
+                    const otherArrow = otherCard.querySelector('.dropdown-arrow');
+                    if (otherArrow) otherArrow.classList.remove('rotate-180');
+                    otherCard.classList.remove('active');
+                });
+
+                // Toggle current dropdown
+                if (!isOpen) {
+                    targetContent.classList.add('open');
+                    arrow.classList.add('rotate-180');
+                    this.classList.add('active');
+                }
+            });
+        });
+
+        
+    </script>
+</body>
+</html>
